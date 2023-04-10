@@ -1,0 +1,23 @@
+{
+	"name": "rvelte-tauri",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"tauri": "tauri",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"@fontsource/fira-mono": "^4.5.10",
+		"@neoconfetti/svelte": "^1.0.0",
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-static": "^1.0.0-next.50",
+		"@sveltejs/kit": "^1.5.0",
+		"@tauri-apps/api": "^1.2.0",
+		"@tauri-apps/cli": "^1.2.3",
+		"svelte": "^3.54.0",
+		"svelte-preprocess": "^5.0.3",
+		"vite": "^4.2.0"
+	},
+	"type": "module"
+}
