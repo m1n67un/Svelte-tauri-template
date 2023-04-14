@@ -1,6 +1,19 @@
 <script>
+    import { onMount } from 'svelte';
 	import Header from './Header.svelte';
 	import './styles.css';
+	import { invoke } from '@tauri-apps/api/tauri'
+
+	let msg = '';
+	onMount(async () => {
+		let name = 'tauri';
+		async function greet() {
+			console.log("Hello, tauri!");
+			msg = await invoke("greet", {name});
+		}
+
+		greet();
+	})
 </script>
 
 <div class="app">
@@ -12,6 +25,7 @@
 
 	<footer>
 		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<p>{msg}</p>
 	</footer>
 </div>
 
